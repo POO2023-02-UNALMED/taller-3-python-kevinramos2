@@ -3,14 +3,14 @@ class Control:
         self.tv = None
 
   #enlazar tv con control.
+    def enlazar(self, tv):
+        tv.setControl(self)
+        self.tv = tv
     def setTv(self, tv):
         self.tv = tv
     def getTv(self):
         return self.tv
-    def enlazar(self, tv):
-        tv.setControl(self)
-        self.tv = tv
-      
+ 
   #metodos turnOn, turnOff, canalUp, canalDown, volumenUp, volumenDown, setCanal, getCanal.
     def turnOn(self):
         if self.tv != None:
@@ -25,9 +25,6 @@ class Control:
     def canalDown(self):
         if self.tv != None:
             self.tv.canalDown()
-    def setCanal(self, canal):
-        if self.tv != None:
-            self.tv.setCanal(canal)
 
     def volumenUp(self):
         if self.tv != None:
@@ -35,6 +32,10 @@ class Control:
     def volumenDown(self):
         if self.tv != None:
             self.tv.volumenDown()
+
+    def setCanal(self, canal):
+        if self.tv != None:
+            self.tv.setCanal(canal)
     def setVolumen(self, volumen):
         if self.tv != None:
             self.tv.setVolumen(volumen)
