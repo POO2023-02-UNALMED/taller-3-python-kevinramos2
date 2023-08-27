@@ -3,5 +3,5 @@ class Marca:
         self.nombre = nombre
     def setNombre(self, nombre):
         self.nombre = nombre
-    def getNombre(self, nombre):
+    def getNombre(self):
         return self.nombre
