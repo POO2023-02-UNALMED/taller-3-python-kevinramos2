@@ -37,16 +37,8 @@ class TV:
     def getVolumen(self):
         return self.volumen
     
-    #conteo 
-    @classmethod
-    def setNumTV(cls, numTV):
-        cls.numTV = numTV
-    @classmethod
-    def getNumTV(cls):
-        return cls.numTV
-
     #metodos: turnUp, turnOff
-    def turnUp(self):
+    def turnOn(self):
         self.estado = True
     def turnOff(self):
         self.estado = False
@@ -69,3 +61,11 @@ class TV:
     def volumenDown(self):
         if((self.estado == True) and (self.volumen>0 and self.volumen<=7)):
             self.volumen -= 1
+
+    #conteo 
+    @classmethod
+    def setNumTV(cls, numTV):
+        cls.numTV = numTV
+    @classmethod
+    def getNumTV(cls):
+        return cls.numTV
