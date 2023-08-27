@@ -55,15 +55,15 @@ class TV:
     
     #metodos canalUp, canalDown, volumenUp, volumenDown
     def canalUp(self):
-        if(self.estado and (self.canal>=1 and self.canal<121)):
+        if((self.estado == True)) and (self.canal>=1 and self.canal<120):
             self.canal += 1
     def canalDown(self):
-        if(self.estado and (self.canal>1 and self.canal<=120)):
+        if((self.estado == True) and (self.canal>1 and self.canal<=120)):
             self.canal -= 1
     
     def volumenUp(self):
-        if(self.estado and (self.volumen>=0 and self.volumen<8)):
+        if((self.estado == True) and (self.volumen>=0 and self.volumen<7)):
             self.volumen += 1
     def volumenDown(self):
-        if(self.estado and (self.volumen>0 and self.volumen<=7)):
+        if((self.estado == True) and (self.volumen>0 and self.volumen<=7)):
             self.volumen -= 1
